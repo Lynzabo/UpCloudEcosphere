@@ -1,0 +1,53 @@
+<RCC>
+    <qresource prefix="/ddmi"/>
+    <qresource prefix="/ddmi/unstruct"/>
+    <qresource prefix="/ddmi/struct"/>
+    <qresource prefix="/ddmi/schedule/imgs">
+        <file alias="STATE_DISCARD">imgs/ddmi/schedule/废弃图标.png</file>
+        <file alias="STATE_ADDRISNULL">imgs/ddmi/schedule/目标地址为空图标.png</file>
+        <file alias="STATE_TASKSUCCESS">imgs/ddmi/schedule/任务处理成功图标.png</file>
+        <file alias="STATE_TASKERROR">imgs/ddmi/schedule/任务处理失败图标.png</file>
+        <file alias="STATE_SENDSUCCESS">imgs/ddmi/schedule/下发成功图标.png</file>
+        <file alias="STATE_SENDERROR">imgs/ddmi/schedule/下发出错图标.png</file>
+        <file alias="STATE_DOWNSUCCESS">imgs/ddmi/schedule/下载成功图标.png</file>
+        <file alias="STATE_DOWNERROR">imgs/ddmi/schedule/下载出错图标.png</file>
+        <file alias="STATE_PAUSE">imgs/ddmi/schedule/暂停中图标.png</file>
+        <file alias="STATE_SENDING">imgs/ddmi/schedule/正在下发图标.png</file>
+        <file alias="STATE_PRESEND">imgs/ddmi/schedule/准备下发图标.png</file>
+        <file alias="STATE_EXECERROR">imgs/ddmi/schedule/执行失败图标.png</file>
+        <file alias="STATE_EXECSUCCESS">imgs/ddmi/schedule/执行成功图标.png</file>
+    </qresource>
+    <qresource prefix="/ddmi/unstruct/imgs">
+        <file alias="expand">imgs/expand.png</file>
+        <file alias="unexpand">imgs/unexpand.png</file>
+        <file alias="imgs/task_error">imgs/task_error.png</file>
+        <file alias="imgs/checkbox_tool_disselected">imgs/checkbox_tool_disselected.png</file>
+        <file alias="imgs/checkbox_tool_selected">imgs/checkbox_tool_selected.png</file>
+        <file alias="STATE_DISCARD">imgs/ddmi/unstruct/废弃图标.png</file>
+        <file alias="STATE_ADDRISNULL">imgs/ddmi/unstruct/目标地址为空图标.png</file>
+        <file alias="STATE_TASKSUCCESS">imgs/ddmi/unstruct/任务处理成功图标.png</file>
+        <file alias="STATE_TASKERROR">imgs/ddmi/unstruct/任务处理失败图标.png</file>
+        <file alias="STATE_SENDERROR">imgs/ddmi/unstruct/下发出错图标.png</file>
+        <file alias="STATE_DOWNSUCCESS">imgs/ddmi/unstruct/下载成功图标.png</file>
+        <file alias="STATE_DOWNERROR">imgs/ddmi/unstruct/下载出错图标.png</file>
+        <file alias="STATE_PAUSE">imgs/ddmi/unstruct/暂停中图标.png</file>
+        <file alias="STATE_SENDING">imgs/ddmi/unstruct/正在下发图标.png</file>
+        <file alias="STATE_PRESEND">imgs/ddmi/unstruct/准备下发图标.png</file>
+        <file alias="STATE_SENDSUCCESS">imgs/ddmi/unstruct/下发成功图标.png</file>
+    </qresource>
+    <qresource prefix="/ddmi/struct/imgs">
+        <file alias="STATE_DISCARD">imgs/ddmi/struct/废弃图标.png</file>
+        <file alias="STATE_PARSESUCCESS">imgs/ddmi/struct/解析成功图标.png</file>
+        <file alias="STATE_PARSEERROR">imgs/ddmi/struct/解析失败图标.png</file>
+        <file alias="STATE_ADDRISNULL">imgs/ddmi/struct/目标地址为空图标.png</file>
+        <file alias="STATE_TASKSUCCESS">imgs/ddmi/struct/任务处理成功图标.png</file>
+        <file alias="STATE_TASKERROR">imgs/ddmi/struct/任务处理失败图标.png</file>
+        <file alias="STATE_SENDSUCCESS">imgs/ddmi/struct/下发成功图标.png</file>
+        <file alias="STATE_SENDERROR">imgs/ddmi/struct/下发出错图标.png</file>
+        <file alias="STATE_DOWNSUCCESS">imgs/ddmi/struct/下载成功图标.png</file>
+        <file alias="STATE_DOWNERROR">imgs/ddmi/struct/下载出错图标.png</file>
+        <file alias="STATE_PAUSE">imgs/ddmi/struct/暂停中图标.png</file>
+        <file alias="STATE_SENDING">imgs/ddmi/struct/正在下发图标.png</file>
+        <file alias="STATE_PRESEND">imgs/ddmi/struct/准备下发图标.png</file>
+    </qresource>
+</RCC>

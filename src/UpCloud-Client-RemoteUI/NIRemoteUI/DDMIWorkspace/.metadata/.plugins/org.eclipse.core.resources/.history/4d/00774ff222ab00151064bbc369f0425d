@@ -1,0 +1,12 @@
+package com.upcloud.ddmi.core.dto;
+
+public class Task {
+	//任务名称
+	private String taskName;
+    //任务描述
+	private String description;
+    //任务下发时间
+	private String sendTime;
+    //下发策略
+	private short strategy;
+}

@@ -1,0 +1,5 @@
+package com.upcloud.ddmi.jni;
+
+public class MathUtil {
+	public native void output();
+}

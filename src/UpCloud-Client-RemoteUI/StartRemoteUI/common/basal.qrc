@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/basal"/>
+    <qresource prefix="/basal/dict"/>
+    <qresource prefix="/basal/nsgroup/imgs">
+        <file alias="CHILD">imgs/basal/nsgroup/child.png</file>
+        <file alias="PARENT">imgs/basal/nsgroup/parent.png</file>
+        <file alias="SERVER">imgs/basal/nsgroup/server.png</file>
+        <file alias="CHECKED">imgs/basal/nsgroup/checked.png</file>
+        <file alias="CLOSE">imgs/basal/nsgroup/close.png</file>
+        <file alias="END">imgs/basal/nsgroup/end.png</file>
+        <file>imgs/basal/nsgroup/indeterminate.png</file>
+        <file alias="JOINITEM">imgs/basal/nsgroup/joinitem.png</file>
+        <file alias="OPEN">imgs/basal/nsgroup/open.png</file>
+        <file>imgs/basal/nsgroup/unchecked.png</file>
+        <file>imgs/basal/nsgroup/vline.png</file>
+        <file alias="EDIT_GROUP">imgs/basal/nsgroup/编辑群组.png</file>
+        <file alias="NODE_UNUSED">imgs/basal/nsgroup/节点不可用.png</file>
+        <file alias="DELETE_ALL">imgs/basal/nsgroup/清空节点服务器.png</file>
+        <file alias="GROUP_UNUSED">imgs/basal/nsgroup/群组不可用灰色.png</file>
+        <file alias="DELETE">imgs/basal/nsgroup/删除.png</file>
+        <file alias="SET_USE">imgs/basal/nsgroup/设置.png</file>
+        <file alias="MOVE">imgs/basal/nsgroup/移动.png</file>
+        <file alias="ADD_NODE">imgs/basal/nsgroup/增加节点服务器.png</file>
+        <file alias="ADD_GROUP">imgs/basal/nsgroup/增加群组.png</file>
+    </qresource>
+</RCC>

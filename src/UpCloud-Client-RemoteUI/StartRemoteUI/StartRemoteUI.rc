@@ -1,0 +1,32 @@
+#include "winver.h"
+
+IDI_ICON1       ICON      "StartRemoteUI.ico"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION    1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGS      0x0L
+ FILEFLAGSMASK  0x3fL
+ FILEOS         VOS_NT_WINDOWS32
+ FILETYPE       VFT_APP
+ FILESUBTYPE    VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "UpCloud Inc."
+            VALUE "FileDescription", "运维监控数据分发管理客户端"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "LegalCopyright", "Copyright (C) 2015-2020 UpCloud Inc."
+            VALUE "InternalName", "DDMI-OMMI"
+            VALUE "OriginalFilename", "DDMI-OMMI"
+            VALUE "ProductName", "运维监控数据分发管理客户端"
+            VALUE "ProductVersion", "1.0.0.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END

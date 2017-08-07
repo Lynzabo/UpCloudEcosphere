@@ -1,0 +1,7 @@
+package com.upcloud.ddmi.util;
+
+public class LogUtil {
+	public synchronized void d(String msg){
+		
+	}
+}

@@ -1,0 +1,12 @@
+#ifndef TIMERLIB_GLOBAL_H
+#define TIMERLIB_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(TIMERLIB_LIBRARY)
+#  define TIMERLIBSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define TIMERLIBSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // TIMERLIB_GLOBAL_H

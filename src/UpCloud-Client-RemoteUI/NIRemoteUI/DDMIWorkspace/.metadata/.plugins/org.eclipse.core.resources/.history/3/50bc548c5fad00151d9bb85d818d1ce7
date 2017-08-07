@@ -1,0 +1,9 @@
+package com.upcloud;
+
+public class SignalHandlerExample {
+
+	public SignalHandlerExample() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

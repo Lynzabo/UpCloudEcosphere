@@ -1,0 +1,8 @@
+package com.upcloud.ddmi.core.dto;
+
+public class Task {
+	private String name;
+	private String description;
+	private String sendTime;
+	private short strategy;
+}

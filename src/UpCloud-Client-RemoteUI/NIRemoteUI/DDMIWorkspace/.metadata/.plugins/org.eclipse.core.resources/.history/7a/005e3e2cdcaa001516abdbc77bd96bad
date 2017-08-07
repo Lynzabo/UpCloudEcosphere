@@ -1,0 +1,14 @@
+package com.upcloud.ddmi;
+
+public enum UpCloudDDMI1 {
+	INSTANCE;
+	/**
+	 * 
+	 */
+	public void startDDMIService(){
+		
+	}
+	public static UpCloudDDMI getInstance(){
+		return INSTANCE;
+	}
+}

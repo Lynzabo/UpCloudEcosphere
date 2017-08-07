@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.servlet.ServletContextListener"/>
+<fullyQualifiedTypeName name="java.lang.UnsatisfiedLinkError"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.UpCloudDDMI.Strategy"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.core.dto.TaskAddrs"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.core.dto.TaskAddr"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.core.dto.TaskFiles"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.core.DDEditor"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="java.util.Collection"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.util.CollectionUtil"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.core.exception.DDMIMetaIllegalException"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.core.dto.Task"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.util.UuidUtil"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.util.StringHelper"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.util.JNILogUtil"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.core.DDMIService"/>
+<fullyQualifiedTypeName name="java.lang.Runnable"/>
+<fullyQualifiedTypeName name="java.io.PrintWriter"/>
+<fullyQualifiedTypeName name="java.util.Timer"/>
+<fullyQualifiedTypeName name="java.lang.ClassLoader"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.UpCloudDDMI"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="com.upcloud.ddmi.listener.DDMIListener"/>
+<fullyQualifiedTypeName name="org.apache.jasper.tagplugins.jstl.core.ForEach"/>
+<fullyQualifiedTypeName name="java.lang.Thread"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.text.BreakIterator"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+</qualifiedTypeNameHistroy>

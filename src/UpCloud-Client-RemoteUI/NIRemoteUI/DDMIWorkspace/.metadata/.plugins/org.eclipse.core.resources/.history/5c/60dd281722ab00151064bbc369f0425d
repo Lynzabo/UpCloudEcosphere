@@ -1,0 +1,20 @@
+package com.upcloud.ddmi.core;
+
+public class DDEditor1 {
+	
+	/**
+	 * 确认操作
+	 */
+	public void commit(){
+		
+	}
+	/**
+	 * 取消操作
+	 */
+	public void rollback(){
+		
+	}
+	public DDEditor setTaskInfo(){
+		return this;
+	}
+}

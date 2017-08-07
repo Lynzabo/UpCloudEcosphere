@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.upcloud.ddmi</groupId>
+	<artifactId>upcloud-ddmi</artifactId>
+	<!-- 运维监控数据分发管理系统版本控制规则: 总版本号.分支版本号.小版本号-里程碑版本 总版本号:大版本的变化,如struts1和struts2架构完全不同,总版本号的变动一般表示框架的变动 
+		分支版本号：一般表示增加了一些功能。如Spring2到Spring3 小版本号:在分支版本上面进行了bug的修改。 里程碑的版本:刚开始时SNAPSHOT版本，开发版本。过一段时间，觉得稳定了，改成alpha，指的是内部的测试版本，又往上，变成beta版本，指的是外部的工作版本，又往上就变成了Release，我们又认为非常稳定，就变成了GA版本稳定版本。 
+		SNAPSHOT->alpha->beta->release->GA 一般的，总版本号和分支版本号必须要。 -->
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging><!-- parent也必须是pom类型 -->
+
+
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.name>应用监控数据分发管理系统Web接口</project.name>
+		<junit.version>4.10</junit.version>
+	</properties>
+	<!-- 配置默认工厂 -->
+	<!--<repositories> <repository> <id>central</id> <name>Central Repository</name> 
+		<url>http://maven.antelink.com/content/repositories/central/</url> <layout>default</layout> 
+		<snapshots> <enabled>false</enabled> </snapshots> </repository> </repositories> -->
+
+	<!-- 聚合列表 -->
+	<modules>
+		<module>../upcloud-ddmi-core</module>
+		<module>../upcloud-ddmi-service</module>
+		<module>../upcloud-ddmi-testweb</module>
+	</modules>
+	<!-- 插件 -->
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- 配置打源代码包插件 -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<version>2.1.2</version>
+					<executions>
+						<!-- execution设置到某个生命周期之后执行 -->
+						<execution>
+							<!-- 到生命周期的package -->
+							<phase>package</phase>
+							<!-- 在生命周期package之后，就运行 maven-source-plugin插件，运行这个插件的jar-no-fork目标 -->
+							<goals>
+								<goal>jar-no-fork</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+	<!-- 生成测试报告 -->
+	<!-- <reporting> <plugins> <plugin> <groupId>org.apache.maven.plugins</groupId> 
+		<artifactId>maven-surefire-report-plugin</artifactId> <version>2.19</version> 
+		<configuration> <outputName>${project.name}</outputName> </configuration> 
+		</plugin> 并可打印错误源码 <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-jxr-plugin</artifactId> 
+		</plugin> </plugins> </reporting> -->
+	<!-- 使用dependencyManagement管理包，这样应用继承哪个就声明哪个 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>log4j</groupId>
+				<artifactId>log4j</artifactId>
+				<version>1.2.17</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>upcloud-ddmi-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>upcloud-ddmi-service</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${project.groupId}</groupId>
+				<artifactId>upcloud-ddmi-testweb</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

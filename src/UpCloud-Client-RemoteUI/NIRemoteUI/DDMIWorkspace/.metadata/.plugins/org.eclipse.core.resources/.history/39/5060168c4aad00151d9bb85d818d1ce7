@@ -1,0 +1,49 @@
+/**
+ * Copyright (c) UpCloud C/C++ development team.
+ * All rights 2015 reserved.
+ *
+ *      Project : upcloud-ddmi
+ *     FileName : UpCloudDDMI.java
+ *      Package : com.upcloud.ddmi
+ *	      Title : UpCloudDDMI
+ *         Time : [2015年12月25日 下午3:54:45] 
+ *       Author : Lynzabo
+ *       Verion : 1.0
+ */
+package com.upcloud.ddmi;
+
+import com.upcloud.ddmi.core.DDEditor;
+import com.upcloud.ddmi.core.DDMIService;
+
+/**
+ * <div style="text-align:left;margin-left:20px"> <b>类信息</b>
+ * <ul>
+ * <li><b>ClassName</b> - UpCloudDDMI</li>
+ * <li><b>Description</b> - 上云科技数据分发服务入口</li>
+ * <li><b>Notice</b> - 所有的常量必须有注释,并且应该用"域注释"</li>
+ * </ul>
+ * 
+ * @version 1.0
+ * @since 2015年12月25日 下午3:54:45
+ * @author Lynzabo </div>
+ */
+public enum UpCloudDDMI {
+	INSTANCE;
+	/**
+	 * 
+	 */
+	public void startup() {
+		dservice.startup();
+	}
+	public void destory() {
+		dservice.destory();
+	}
+
+	public static UpCloudDDMI getInstance() {
+		return INSTANCE;
+	}
+	public DDEditor createDDEditor() {
+		return new DDEditor();
+	}
+	private DDMIService dservice;
+}

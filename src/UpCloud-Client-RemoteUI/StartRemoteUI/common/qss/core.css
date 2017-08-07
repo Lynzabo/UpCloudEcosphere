@@ -1,0 +1,288 @@
+* {
+	background-color: rgb(254, 253, 253);
+	font-size: 14px;
+	font-family: "Microsoft YaHei", Verdana, sans-serif, "SimSun"
+}
+/*头部,底部*/
+QWidget#w_header,QWidget#w_header * {
+	background-color: rgb(46, 95, 121);
+}
+QWidget#w_ender,QWidget#w_ender * {
+	border-top:1px solid #B9B8B8;
+	background-color: #f9f9f9;
+	font-size:12px;
+}
+QWidget#w_ender QWidget#w_net * {
+	font-size:10px;
+}
+QWidget#w_header QLabel#label_title {
+	font-size: 30px;
+	color: rgb(255, 255, 255);
+	line-height: 20px;
+}
+
+
+/*主窗口*/
+QDialog#RemoteUIFrameWork{
+	border:1px solid #615E5E;
+	border-radius:0px;	
+}
+/*右上角begin*/
+QWidget#w_opera {
+	
+}
+/*右上角按钮集begin*/
+QPushButton#btn_menu_set,QPushButton#btn_menu_min,QPushButton#btn_menu_max,QPushButton#btn_menu_close{
+	border-radius:0px;
+	color: #F0F0F0;
+	background-color:rgba(0,0,0,0);
+	border-style:none;
+}
+
+QPushButton#btn_menu_set:hover,QPushButton#btn_menu_min:hover,QPushButton#btn_menu_max:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(25, 134, 199, 0), stop:1 rgb(164, 178, 255));
+}
+
+QPushButton#btn_menu_close:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(238, 0, 0, 128), stop:1 rgba(100, 44, 44, 255));
+}
+/*右上角按钮集end*/
+/*右上角end*/
+/*右上角传输begin*/
+QWidget#w_window  QWidget#w_transfer QToolButton#tb_transfer {
+	margin-top:48px;
+	outline: none;
+	border-radius:0px;
+	color: #F0F0F0;
+	background-color: rgb(101, 190, 159);
+	/*border:1px solid rgb(113, 111, 111);*/
+	padding-left:6px;
+	padding-right:6px;
+	padding-top:3px;
+	padding-bottom:3px;
+	font: 10pt "黑体";
+}
+/*右上角传输end*/
+/*设置菜单begin*/
+QMenu{
+    background:white;
+	border:1px solid lightgray;
+}
+QMenu::item{
+	padding:0px 100px 0px 20px;
+	height:25px;
+}
+QMenu::item:selected:enabled{
+    background:lightgray;
+	color:white;
+}
+QMenu::item:selected:!enabled{
+    background:transparent;
+}
+QMenu::separator{
+    height:1px;
+    background:lightgray;
+	margin:2px 0px 2px 0px;
+}
+
+QMenu#menu{
+    background:white;
+	border:1px solid lightgray;
+}
+QMenu#menu::item{
+	padding:0px 40px 0px 30px;
+	height:25px;
+}
+QMenu#menu::item:selected:enabled{
+    background:lightgray;
+	color:white;
+}
+QMenu#menu::item:selected:!enabled{
+    background:transparent;
+}
+QMenu#menu::separator{
+    height:1px;
+    background:lightgray;
+	margin:2px 0px 2px 0px;
+}
+QMenu#menu::indicator {
+    padding:10px;
+}
+/*设置菜单end*/
+
+/*页签begin*/
+QWidget#w_funcs {
+	border-bottom: 2px solid #edefee;
+	padding-bottom: 1px;
+}
+/*页签按钮begin*/
+QWidget#w_funcs QPushButton{
+	outline: none;
+	border-radius:0px;
+	color: #F0F0F0;
+	background-color: rgb(101, 190, 159);
+	/*border:1px solid rgb(113, 111, 111);*/
+	padding-left:10px;
+	padding-right:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font: 10pt "黑体";
+}
+
+QWidget#w_funcs QPushButton:hover{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #418970, stop:1 #8bcdb6);
+}
+QWidget#w_funcs QPushButton:checked{
+	background-color: #effdf8;
+	color:black;
+	/*border-bottom: 1px solid rgb(101, 190, 159);*/
+}
+/*页签按钮end*/
+/*页签下拉begin*/
+/*Qmenu Style Sheets*/
+ QMenu#funcMenu {
+ 	padding: 0px;
+ 	margin: 0px;
+ 	background-color: white;
+ }
+ 
+ QMenu#funcMenu::item {
+     background-color: transparent;
+     padding:2px 32px;
+ }
+ 
+ QMenu#funcMenu::item:selected {
+     background-color:#cc62b798;
+ }
+ /*页签下拉end*/
+/*页签end*/
+/*Loading begin*/
+QWidget#Loading {
+	font: 10pt "黑体";
+}
+QWidget#Loading QLabel#l_detail {
+	color:red;
+}
+/*Loading end*/
+/*表格列表统一样式begin*/
+QTableWidget {
+	font-size:12px;
+	selection-background-color:rgb(220, 248, 253);
+	color:rgb(10,10,10);
+	selection-color:rgb(10,10,10);
+	
+}
+/*鼠标滑过表格单元格效果*/
+QTableWidget::item:hover {
+    background-color: rgba(220, 248, 253,200);
+}
+/*日历框第一行第一列的样式*/
+QCalendarWidget QWidget 
+{
+  alternate-background-color: rgb(204, 226, 252,100); 
+  
+}
+
+
+/*日历框年月的样式*/
+ QCalendarWidget  QToolButton {
+    border-radius: 4px;
+    padding: 2px;
+	color: rgb(10,10,10);
+}
+/*分页表尾样式*/
+QWidget#table_end {
+	background-color: rgb(198, 198, 198);
+	border-bottom:1px solid;
+	border-bottom-color: rgb(111, 111, 111);
+}
+/*水平滚动条样式*/
+/*QScrollBar {
+	background:transparent; 
+	height:10px;
+}
+QScrollBar::handle{
+	background:lightgray; 
+	border:2px solid transparent; 
+	border-radius:5px;
+}
+QScrollBar::handle:hover{
+	background:gray;
+}
+QScrollBar::sub-line{
+	background:transparent;
+}
+QScrollBar::add-line{
+	background:transparent;
+}*/
+
+/*表格列表统一样式end*/
+/*非结构化列表begin*/
+/*
+QWidget#DirUnstructWidget QPushButton,QComboBox {
+	background-color: rgb(46, 95, 121);
+	color: rgb(255, 255, 255);
+	height:20px;
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:5px;
+}
+QWidget#DirUnstructWidget QPushButton:hover,QComboBox:hover {
+	background-color: #89b1c7;
+	color: rgb(0, 0, 0);
+}
+*/
+QPushButton,QComboBox {
+	font-size:15px;
+	background-color: rgb(46, 95, 121);
+	color: rgb(255, 255, 255);
+	height:20px;
+	padding-top:2px;
+	padding-bottom:2px;
+	padding-left:10px;
+	padding-right:10px;
+	border-radius:5px;
+}
+QPushButton:hover,QComboBox:hover {
+	background-color: rgba(46, 95, 121,230);
+}
+QPushButton#btn_folder {
+	background-color: rgb(255, 255, 255,100);	
+}
+QPushButton#btn_select {
+	margin-left:100px;
+	width:80px;
+}
+QTreeView::branch:has-siblings:!adjoins-item {
+    border-image: url(:/basal/nsgroup/imgs/VLINE) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item {
+    border-image: url(:/basal/nsgroup/imgs/JOINITEM) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item {
+    border-image: url(:/basal/nsgroup/imgs/END) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed,
+QTreeView::branch:closed:has-children:has-siblings {
+        border-image: none;
+        image: url(:/basal/nsgroup/imgs/CLOSE);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings  {
+        border-image: none;
+        image: url(:/basal/nsgroup/imgs/OPEN);
+}
+/*非结构化列表end*/
+/*非结构化详情begin*/
+QWidget#w_addrs_position ,QWidget#w_files_position {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                 stop:0 white, stop: 0.4 gray, stop:1 green)
+}
+/*非结构化详情end*/
+

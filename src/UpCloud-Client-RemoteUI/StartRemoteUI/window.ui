@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Window</class>
+ <widget class="QMainWindow" name="Window">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1096</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::NoFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>分发管理系统远程UI功能测试</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 9pt &quot;宋体&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>功能测试</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QTabWidget" name="btnsWidget">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="unstructTab">
+          <attribute name="title">
+           <string>非结构化</string>
+          </attribute>
+          <widget class="QPushButton" name="pushButton_2">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>20</y>
+             <width>181</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询名称为aa所有任务</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_3">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>20</y>
+             <width>121</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询所有任务</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_8">
+           <property name="geometry">
+            <rect>
+             <x>400</x>
+             <y>20</y>
+             <width>181</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询可下发节点服务器</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_addtask">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>90</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加任务</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_addtasknode">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>90</y>
+             <width>161</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加任务节点服务器</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_addtaskfile">
+           <property name="geometry">
+            <rect>
+             <x>400</x>
+             <y>90</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加任务文件</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_15">
+           <property name="geometry">
+            <rect>
+             <x>710</x>
+             <y>90</y>
+             <width>161</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>删除任务节点服务器</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_16">
+           <property name="geometry">
+            <rect>
+             <x>920</x>
+             <y>90</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>删除任务</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_17">
+           <property name="geometry">
+            <rect>
+             <x>550</x>
+             <y>90</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>删除任务文件</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>150</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查看任务信息</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_2">
+           <property name="geometry">
+            <rect>
+             <x>180</x>
+             <y>150</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>修改任务信息</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_4">
+           <property name="geometry">
+            <rect>
+             <x>340</x>
+             <y>160</y>
+             <width>91</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询节点服务器</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="structTab">
+          <attribute name="title">
+           <string>结构化</string>
+          </attribute>
+          <widget class="QPushButton" name="btn_addStructTask">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加任务</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemStructTask">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>30</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查看任务</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_updateStructTask">
+           <property name="geometry">
+            <rect>
+             <x>310</x>
+             <y>30</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>修改任务</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_listStructTask">
+           <property name="geometry">
+            <rect>
+             <x>460</x>
+             <y>30</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询任务列表</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_delStructTask">
+           <property name="geometry">
+            <rect>
+             <x>600</x>
+             <y>30</y>
+             <width>111</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>删除任务</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_addStructAddrTask">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>90</y>
+             <width>141</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加节点服务器</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_delStructAddrTask">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>90</y>
+             <width>141</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>删除节点服务器</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_addStructFileTask">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>140</y>
+             <width>81</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加文件</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_delStructFileTask">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>140</y>
+             <width>81</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>删除文件</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="scheduleTab">
+          <attribute name="title">
+           <string>控制传输</string>
+          </attribute>
+         </widget>
+         <widget class="QWidget" name="OtherTab">
+          <attribute name="title">
+           <string>数据字典管理</string>
+          </attribute>
+          <widget class="QPushButton" name="btn_stopSchedule">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>30</y>
+             <width>121</width>
+             <height>28</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>停止任务调度</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_3">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>70</y>
+             <width>301</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加SUP_UUID为0/1的字典</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_4">
+           <property name="geometry">
+            <rect>
+             <x>350</x>
+             <y>70</y>
+             <width>321</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询SUP_UUID为0/1的所有字典</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_8">
+           <property name="geometry">
+            <rect>
+             <x>530</x>
+             <y>130</y>
+             <width>471</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>修改UUID为4的字典信息（不可以修改字典编码）</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_9">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>130</y>
+             <width>461</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>删除UUID为4以及SUP_UUID为4的所有字典</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_5">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>190</y>
+             <width>461</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询CODE为USABLE，SUP_UUID为1的字典信息</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>节点服务器组维护</string>
+          </attribute>
+          <widget class="QPushButton" name="btn_itemtask_6">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>20</y>
+             <width>201</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加SUP_UUID为0/1的群组</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_10">
+           <property name="geometry">
+            <rect>
+             <x>350</x>
+             <y>90</y>
+             <width>451</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>删除GROUP_UUID为1的组下CLIENT_UUID为1、2、3的节点服务器</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_11">
+           <property name="geometry">
+            <rect>
+             <x>570</x>
+             <y>20</y>
+             <width>261</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>查询SUP_UUID为0/1的下级所有组</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_13">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>90</y>
+             <width>311</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>为GROUP_UUID为1的组添加一组节点服务器</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_14">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>160</y>
+             <width>261</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">evilButton{background-color:red;}</string>
+           </property>
+           <property name="text">
+            <string>获取SUP_UUID为1的节点服务器列表</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_12">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>160</y>
+             <width>501</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>删除GROUP_UUID为1的组（注意要递归删除所有子组和组下节点服务器）</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_itemtask_7">
+           <property name="geometry">
+            <rect>
+             <x>240</x>
+             <y>20</y>
+             <width>311</width>
+             <height>41</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>修改UUID为1的群组信息（除UUID不能改）</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="title">
+       <string>打印结果</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QTextBrowser" name="textBrowser"/>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="text">
+              <string>清除</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

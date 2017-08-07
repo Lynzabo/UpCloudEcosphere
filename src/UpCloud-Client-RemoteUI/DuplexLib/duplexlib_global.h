@@ -1,0 +1,12 @@
+#ifndef DUPLEXLIB_GLOBAL_H
+#define DUPLEXLIB_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(DUPLEXLIB_LIBRARY)
+#  define DUPLEXLIBSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define DUPLEXLIBSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // DUPLEXLIB_GLOBAL_H

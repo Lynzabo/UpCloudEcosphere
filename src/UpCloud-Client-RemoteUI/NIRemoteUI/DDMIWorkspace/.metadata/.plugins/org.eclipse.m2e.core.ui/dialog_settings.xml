@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.wizards.MavenProjectSelectionDialog">
+		<item value="480" key="width"/>
+		<item value="720" key="x"/>
+		<item value="223" key="y"/>
+		<item value="450" key="height"/>
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="E:\UpCloudEcosphere\UpCloud-Client-RemoteUI\NIRemoteUI\DDMIWorkspace"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item value="All Catalogs" key="catalog"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="E:\UpCloudEcosphere\UpCloud-Client-RemoteUI\NIRemoteUI\DDMIWorkspace\sytem-dao\pom.xml"/>
+			<item value="E:\UpCloudEcosphere\UpCloud-Client-RemoteUI\NIRemoteUI\DDMIWorkspace\system-domain\pom.xml"/>
+			<item value="E:\UpCloudEcosphere\UpCloud-Client-RemoteUI\NIRemoteUI\DDMIWorkspace\system-parent\pom.xml"/>
+			<item value="E:\UpCloudEcosphere\UpCloud-Client-RemoteUI\NIRemoteUI\DDMIWorkspace\upcloud-ddmi-testweb"/>
+			<item value="E:\UpCloudEcosphere\UpCloud-Client-RemoteUI\NIRemoteUI\DDMIWorkspace\user-parent"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="me.gacl.system_web"/>
+			<item value="me.gacl.system_service"/>
+			<item value="me.gacl.sytem_dao"/>
+			<item value="me.gacl.system_domain"/>
+			<item value="me.gacl.system_parent"/>
+			<item value="com.upcloud.ddmi.testweb"/>
+			<item value="com.upcloud.ddmi.ddmitest"/>
+			<item value="com.upcloud.ddmi.service"/>
+			<item value="com.upcloud.ddmi.core"/>
+			<item value="com.upcloud.ddmi"/>
+		</list>
+		<list key="groupId">
+			<item value="me.gacl"/>
+			<item value="com.upcloud.ddmi"/>
+		</list>
+		<list key="artifactId">
+			<item value="system-web"/>
+			<item value="system-service"/>
+			<item value="sytem-dao"/>
+			<item value="system-domain"/>
+			<item value="system-parent"/>
+			<item value="upcloud-ddmi-testweb"/>
+			<item value="upcloud-ddmi-ddmitest"/>
+			<item value="upcloud-ddmi-service"/>
+			<item value="upcloud-ddmi-core"/>
+			<item value="upcloud-ddmi"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

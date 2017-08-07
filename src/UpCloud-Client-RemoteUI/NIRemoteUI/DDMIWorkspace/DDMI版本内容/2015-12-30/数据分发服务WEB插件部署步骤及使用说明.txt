@@ -1,0 +1,23 @@
+=====================================================
+数据分发服务WEB插件部署步骤:
+---
+1.拷贝log4j.properties文件到WEB应用的【src】目录下
+2.拷贝upcloud-ddmi-1.0.0.1-SNAPSHOT.jar包到WEB应用的【WebRoot或WebConntent/lib】目录下
+3.拷贝upcloud-ddmi文件夹到WEB应用的【WebRoot或WebConntent】目录下
+4.web.xml中添加代码
+<listener>
+	<listener-class>com.upcloud.ddmi.listener.DDMIListener</listener-class>
+</listener>
+注意：
+启动中间件前，确定配置Qt安装目录的bin目录在环境变量Path下面。
+
+
+
+数据分发服务WEB使用说明:
+---
+1.调用数据分发WEB插件分发服务详细看
+【测试代码】目录下【DDMISendTestServlet.java】文件
+2.调用数据分发WEB插件删除服务详细看
+【测试代码】目录下【DDMISendTestServlet.java】文件
+
+=====================================================

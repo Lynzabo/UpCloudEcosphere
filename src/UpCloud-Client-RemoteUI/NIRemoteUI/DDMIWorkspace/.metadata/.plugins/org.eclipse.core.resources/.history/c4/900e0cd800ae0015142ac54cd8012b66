@@ -1,0 +1,14 @@
+import java.io.IOException;
+
+import com.upcloud.ddmi.listener.DDMIListener;
+
+public class Test {
+	public native void output();
+	public static void main(String[] args) throws IOException {
+		DDMIListener.addDir("C:/Users/dyk/Documents/build-fsdfsdfdsf-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/debug/");
+		System.load("fsdfsdfdsf");
+		Test test= new Test();
+		test.output();
+	}
+
+}

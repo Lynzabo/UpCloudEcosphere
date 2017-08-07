@@ -1,0 +1,63 @@
+#ifndef CSSSTRUCTSENDFILES_H
+#define CSSSTRUCTSENDFILES_H
+
+#include <QtCore>
+
+/**
+ * @brief The CsSStructSendFiles class 结构化任务下发文件归档表
+ * 存放结构化下发任务文件
+ * 文件有先后次序区别
+ */
+
+class CsSStructSendFiles
+{
+
+private:
+    //UUID
+    QString uuid;
+    //原文件名
+    QString fileName;
+    //文件下载地址
+    QString downUrl;
+    //新文件名
+    QString fileDestName;
+    //文件保存路径
+    QString saveAbst;
+    //文件解析次序
+    quint32 sequence;
+    //任务UUID
+    QString taskUuid;
+    //文件硬链接地址
+    QString hardAbst;
+    //文件来源
+    quint8 fileSrc;
+public:
+    CsSStructSendFiles();
+
+    QString getUuid() const;
+    void setUuid(const QString &value);
+
+    QString getFileName() const;
+    void setFileName(const QString &value);
+
+    QString getDownUrl() const;
+    void setDownUrl(const QString &value);
+
+    QString getFileDestName() const;
+    void setFileDestName(const QString &value);
+
+    QString getSaveAbst() const;
+    void setSaveAbst(const QString &value);
+
+    quint32 getSequence() const;
+    void setSequence(const quint32 &value);
+
+    QString getTaskUuid() const;
+    void setTaskUuid(const QString &value);
+    QString getHardAbst() const;
+    void setHardAbst(const QString &value);
+    quint8 getFileSrc() const;
+    void setFileSrc(const quint8 &value);
+};
+
+#endif // CSSSTRUCTSENDFILES_H

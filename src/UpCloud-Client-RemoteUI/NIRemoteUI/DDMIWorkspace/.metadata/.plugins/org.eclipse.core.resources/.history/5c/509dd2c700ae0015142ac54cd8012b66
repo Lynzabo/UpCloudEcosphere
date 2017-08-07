@@ -1,0 +1,10 @@
+
+public class Test {
+	public native void output();
+	public static void main(String[] args) {
+		System.load("C:/Users/dyk/Documents/build-fsdfsdfdsf-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/debug/fsdfsdfdsf.dll");
+		Test test= new Test();
+		test.output();
+	}
+
+}

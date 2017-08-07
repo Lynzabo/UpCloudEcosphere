@@ -1,0 +1,125 @@
+package com.upcloud.ddmi.jni;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import com.upcloud.ddmi.UpCloudDDMI;
+import com.upcloud.ddmi.core.DDEditor;
+import com.upcloud.ddmi.core.dto.Task;
+import com.upcloud.ddmi.core.dto.TaskAddr;
+import com.upcloud.ddmi.core.dto.TaskFile;
+import com.upcloud.ddmi.core.exception.DDMIMetaIllegalException;
+
+public class Test {
+	static {
+		try {
+			// 先配置Qt的安装目录
+			// D:/Program~Softwares~Files/rubyinstaller_2_2_3_x64/Ruby22-x64/bin;D:/Program~Softwares~Files/Python_3_5_x64/Scripts/;D:/Program~Softwares~Files/Python_3_5_x64/;F:/Java's~Namespace/workspaces/Designs
+			// &
+			// Models/build-ttewewew1-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/debug;D:/Program~Softwares~Files/Microsoft
+			// Visual Studio
+			// 12.0/VC/bin/amd64;D:/Program~Softwares~Files/Microsoft
+			// SDKs/Bin/x64;C:/Program Files
+			// (x86)/Java/jdk1.6.0_43/bin;D:/Program~Softwares~Files/Android/android-sdk-windows/platform-tools;D:/Program~Softwares~Files/Android/android-sdk-windows/tools;C:/Qt/Qt5.4.2-windows-x86-msvc2013_64/5.4/msvc2013_64/bin;C:/Qt/Qt5.4.2-windows-x86-msvc2013_64/5.4/msvc2013_64/bin
+			// System.setProperty("java.library.path",
+			// "E:/UpCloudEcosphere/UpCloud-Client-RemoteUI/NIRemoteUI/DDMIWorkspace/upcloud-ddmi/build/classes/com/upcloud/ddmi/jni");
+			// System.loadLibrary("UpCloudDDMILib");
+			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Core/BaseLib/debug/BaseLib.dll");
+			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/NIRemoteUI/UpCloudDDMILib/debug/UpCloudDDMILib.dll");
+			// System.load("E:/UpCloudEcosphere/UpCloud-Client-RemoteUI/NIRemoteUI/DDMIWorkspace/upcloud-ddmi/build/classes/com/upcloud/ddmi/jni/UpCloudDDMILib.dll");
+		//TODO	将jni系统日志注册到Log4j上
+		} catch (UnsatisfiedLinkError e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void main(String[] args) {
+		/*
+		 * MathUtil mathUtil = new MathUtil(); mathUtil.output();
+		 * System.out.println(111);
+		 */
+		Test test = new Test();
+		test.testDDMISend();
+	}
+
+	/**
+	 * 开启数据分发服务
+	 */
+	public void startupDDMI() {
+		UpCloudDDMI.getInstance().startup();
+	}
+
+	/**
+	 * 销毁数据分发服务
+	 */
+	public void destoryDDMI() {
+		UpCloudDDMI.getInstance().destory();
+	}
+
+	public void testDDMIDelete() {
+		final String[] uuids = new String[] { "unstruct_UUID", "struct_UUID" };
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				DDEditor editor = UpCloudDDMI.getInstance().createDDEditor();
+				// 业务
+				try {
+					editor.delete(uuids);
+					// Web业务代码
+					editor.commit();
+				} catch (DDMIMetaIllegalException e) {
+					editor.rollback();
+				} catch (Exception ex) {
+				}
+			}
+		}).start();
+	}
+
+	/**
+	 * 使用数据分发服务
+	 */
+	public void testDDMISend() {
+		// 下发任务信息
+		final Task task = new Task();
+		task.setTaskName("task000001").setDescription("task000001的描述信息")
+				.setStrategy((short) 0x1);
+		// 待下发节点服务器列表信息
+		final List<TaskAddr> addrs = new ArrayList<TaskAddr>();
+		TaskAddr addr = new TaskAddr();
+		addr.setAddrUUID("1111111");
+		addr.setIsGroup(true);
+		TaskAddr addr2 = new TaskAddr();
+		addr2.setAddrUUID("22ff22");
+		addr2.setIsGroup(true);
+		addrs.add(addr);
+		addrs.add(addr2);
+		final List<TaskFile> sendFiles = new ArrayList<TaskFile>();
+		TaskFile sendFile = new TaskFile();
+		sendFile.setFileName("111.txt")
+				.setSrcAbst("d:/111.txt")
+				.setFileDestName("111.txt").setSaveAbst("/opt");
+		sendFiles.add(sendFile);
+
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				DDEditor editor = UpCloudDDMI.getInstance().createDDEditor();
+				//可以只setSendFiles,代表下发给所有节点服务器，并且任务信息由数据分发系统生成
+				editor.setSendTask(task).setSendAddrs(addrs)
+						.setSendFiles(sendFiles);
+				String[] uuids = null;//uuids为返回的非结构化任务UUID和结构化任务UUID
+				// 业务
+				try {
+					uuids = editor.send();
+					// Web业务代码
+					editor.commit();
+				} catch (DDMIMetaIllegalException ex) {
+					editor.rollback();
+					return;
+				}
+			}
+		}).start();
+
+	}
+}

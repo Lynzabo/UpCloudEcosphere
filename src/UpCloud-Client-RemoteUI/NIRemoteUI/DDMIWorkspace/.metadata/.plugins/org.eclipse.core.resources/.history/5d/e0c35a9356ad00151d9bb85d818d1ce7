@@ -1,0 +1,10 @@
+package com.upcloud.ddmi.jni;
+
+import com.upcloud.ddmi.core.dto.Task;
+
+public class Test2 {
+	public static void main(String[] args) {
+		Task task = new Task();
+		System.out.println(task == null);
+	}
+}

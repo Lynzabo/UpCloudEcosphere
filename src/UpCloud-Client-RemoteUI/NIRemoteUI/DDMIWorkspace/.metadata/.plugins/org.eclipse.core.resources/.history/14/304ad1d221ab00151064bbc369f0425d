@@ -1,0 +1,5 @@
+package com.upcloud.ddmi.core.dto;
+
+public class Task {
+
+}

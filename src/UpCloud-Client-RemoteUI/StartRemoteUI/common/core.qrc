@@ -1,0 +1,31 @@
+<RCC>
+    <qresource prefix="/core"/>
+    <qresource prefix="/core/i18n">
+        <file alias="i18n/qt_zh_CN">i18n/qt_zh_CN.qm</file>
+        <file alias="i18n/StartRemoteUI_zh_CN">i18n/StartRemoteUI_zh_CN.qm</file>
+    </qresource>
+    <qresource prefix="/core/imgs">
+        <file alias="imgs/window_max">imgs/window_max.png</file>
+        <file alias="imgs/window_min">imgs/window_min.png</file>
+        <file alias="imgs/window_red">imgs/window_red.png</file>
+        <file alias="imgs/window_set">imgs/window_set.png</file>
+        <file alias="imgs/window_close">imgs/window_close.png</file>
+        <file alias="imgs/logo_64">imgs/logo_64.png</file>
+        <file alias="/imgs/loading">imgs/loading.gif</file>
+        <file alias="imgs/logo_32">imgs/logo_32.png</file>
+        <file alias="imgs/messagebox_error">imgs/messagebox_error.png</file>
+        <file alias="imgs/messagebox_question">imgs/messagebox_question.png</file>
+        <file alias="imgs/messagebox_success">imgs/messagebox_success.png</file>
+        <file alias="imgs/logo_128">imgs/logo128.png</file>
+        <file alias="imgs/sort_asc">imgs/sort_asc.png</file>
+        <file alias="imgs/sort_desc">imgs/sort_desc.png</file>
+        <file alias="imgs/ddmi">imgs/ddmi.png</file>
+        <file alias="imgs/ommi">imgs/ommi.png</file>
+        <file alias="imgs/transfer">imgs/transfer.png</file>
+        <file alias="imgs/net_light_normal">imgs/net_light_normal.png</file>
+    </qresource>
+    <qresource prefix="/core/qss">
+        <file alias="qss/core">qss/core.css</file>
+    </qresource>
+    <qresource prefix="/core/fonts"/>
+</RCC>

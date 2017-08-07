@@ -1,0 +1,48 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="<%=basePath %>common/js/jquery-1.7.2.min.js"></script>
+<title>数据分发服务Web调用测试</title>
+<style>
+	input[type=button]{
+		font-size:20px;
+	}
+</style>
+<script type="text/javascript">
+$.ajax({
+	url: toUrl,
+    type: 'post',
+    dataType: 'json',
+    // timeout: 30000,
+    data:pars,
+    error: function(){
+    	alert('系统繁忙,请稍候再试!');
+    	restoreInfo();
+    },
+    success: function(json){		    
+    	var result = json.statusCode;
+		var message = json.message;
+		if(result=="200"){
+			$('span[class=loading]')[0].innerHTML='进入业务系统...';
+			document.location='<%=basePath %>handle/login/forwardMain.action';
+		}else if(result=="300"){
+			alert(message);
+		}else{
+			alert('未知异常!');
+		}			
+		restoreInfo();
+    }
+});
+</script>
+</head>
+<body style="margin-top:300px;text-align:center">
+	<input type="button" value="测试下发"/><br/><br/>
+	<input type="button" value="测试删除" />
+</body>
+</html>

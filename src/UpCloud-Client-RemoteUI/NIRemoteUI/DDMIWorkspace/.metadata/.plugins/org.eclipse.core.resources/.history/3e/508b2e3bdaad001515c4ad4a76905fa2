@@ -1,0 +1,7 @@
+2015-12-29 10:31:50 [DEBUG] "调取器在后台工作,工作实例ID:" 0x1d38 (..\..\..\UpCloudEcosphere\UpCloud-Client-RemoteUI\NetIRemoteUILib\remoteuitaskscheduler.cpp:100, void __cdecl RemoteUITaskScheduler::startup(void))
+2015-12-29 10:31:50 [DEBUG] "准备连接中心服务" (..\..\..\UpCloudEcosphere\UpCloud-Client-RemoteUI\NetIRemoteUILib\remoteuitaskscheduler.cpp:101, void __cdecl RemoteUITaskScheduler::startup(void))
+2015-12-29 10:31:50 [DEBUG] "校验连接服务信息[IP:localhost,port:10086]输入合法,超时时间5000ms,准备请求远程服务建立连接" (..\..\..\UpCloudEcosphere\UpCloud-Client-RemoteUI\NetIRemoteUILib\bridge\bridgeclientmanager.cpp:131, void __cdecl BridgeClientManager::on_hostFound(void))
+2015-12-29 10:31:54 [DEBUG] "请求远程服务建立连接超时,3s之后重新连接" (..\..\..\UpCloudEcosphere\UpCloud-Client-RemoteUI\NetIRemoteUILib\bridge\bridgeclientmanager.cpp:69, void __cdecl BridgeClientManager::connectToServer(void))
+2015-12-29 10:32:00 [DEBUG] "调取器在后台工作,工作实例ID:" 0x2278 (..\..\..\UpCloudEcosphere\UpCloud-Client-RemoteUI\NetIRemoteUILib\remoteuitaskscheduler.cpp:100, void __cdecl RemoteUITaskScheduler::startup(void))
+2015-12-29 10:32:00 [DEBUG] "准备连接中心服务" (..\..\..\UpCloudEcosphere\UpCloud-Client-RemoteUI\NetIRemoteUILib\remoteuitaskscheduler.cpp:101, void __cdecl RemoteUITaskScheduler::startup(void))
+2015-12-29 10:32:00 [DEBUG] "校验连接服务信息[IP:localhost,port:10086]输入合法,超时时间5000ms,准备请求远程服务建立连接" (..\..\..\UpCloudEcosphere\UpCloud-Client-RemoteUI\NetIRemoteUILib\bridge\bridgeclientmanager.cpp:131, void __cdecl BridgeClientManager::on_hostFound(void))

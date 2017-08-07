@@ -1,0 +1,26 @@
+环境配置
+D:\Program~Softwares~Files\apache-maven\apache-maven-3.0.4\conf\settings.xml
+settings.xml添加<localRepository>D:\Program~Softwares~Files\apache-maven\maven-repository</localRepository>
+进入upcloud-ddmi目录
+mvn clean install
+进入upcloud-ddmi-testweb目录,启动Jetty
+mvn jetty:run
+启动Tomcat
+先启动Tomcat
+然后
+mvn tomcat:redeploy 
+
+只打源代码包
+mvn source:jar-no-fork
+修改TEST-*.xml生成HTML版本测试报告
+mvn surefire-report:report
+
+清除输出
+mvn clean
+
+
+注意：每个库的junit通过了，才能进行package以后动作动作，包括package。此时只能运行compile。但是生成测试报告却能用
+
+eclipse输出日志乱码解决
+Run Configurations
+修改输出Encoding编码为GBK

@@ -1,0 +1,3 @@
+DDMI WEB接口版本名称规范：
+公司名-项目名-大版本号.小版本号.次版本号.bug版本号-版本.jar
+UpCloud-DDMI-1.1.加功能.修复bug-SNAPSHOT/alpha/beta/release/GA.jar

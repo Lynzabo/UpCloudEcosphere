@@ -1,0 +1,12 @@
+#ifndef SERIALCOMM_GLOBAL_H
+#define SERIALCOMM_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(SERIALCOMM_LIBRARY)
+#  define SERIALCOMMSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define SERIALCOMMSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // SERIALCOMM_GLOBAL_H

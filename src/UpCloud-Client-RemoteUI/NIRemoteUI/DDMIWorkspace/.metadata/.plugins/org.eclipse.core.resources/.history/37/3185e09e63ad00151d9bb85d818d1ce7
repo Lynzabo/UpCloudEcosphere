@@ -1,0 +1,224 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_UNCAUGHT_CXX_EXCEPTION (0xe06d7363) at pc=0x000007fefd22b3dd, pid=4468, tid=10800
+#
+# JRE version: 6.0_43-b01
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (20.14-b01 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  [KERNELBASE.dll+0xb3dd]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000031c800):  JavaThread "main" [_thread_in_native, id=10800, stack(0x0000000002500000,0x0000000002600000)]
+
+siginfo: ExceptionCode=0xe06d7363, ExceptionInformation=0x0000000019930520 0x00000000025ff5b8 0x000007feeaeb1248 0x000007feeae80000 
+
+Registers:
+RAX=0x00000000738057ad, RBX=0x000000077c4f59a0, RCX=0x00000000025fed00, RDX=0x00000000000000f0
+RSP=0x00000000025ff310, RBP=0x00000000025ff940, RSI=0x000007fee55246d0, RDI=0x00000000025ff460
+R8 =0x0000000000000000, R9 =0x0000000000000000, R10=0x000007feeae80000, R11=0x00000000025ff350
+R12=0x0000000000000000, R13=0x000000077c4f59a0, R14=0x00000000025ff968, R15=0x000000000031c800
+RIP=0x000007fefd22b3dd, EFLAGS=0x0000000000000202
+
+Top of Stack: (sp=0x00000000025ff310)
+0x00000000025ff310:   000000077c4f59a0 000007fee55246d0
+0x00000000025ff320:   00000000025ff460 0000000066d1dd30
+0x00000000025ff330:   00000001e06d7363 0000000000000000
+0x00000000025ff340:   000007fefd22b3dd 000007fe00000004
+0x00000000025ff350:   0000000019930520 00000000025ff5b8
+0x00000000025ff360:   000007feeaeb1248 000007feeae80000
+0x00000000025ff370:   0000000007d27600 00000000025ff3f8
+0x00000000025ff380:   000007feeaea3eba 00000000025ff358
+0x00000000025ff390:   00000000006d3ec0 00000000025ff340
+0x00000000025ff3a0:   0000000000000000 00000000025ff358
+0x00000000025ff3b0:   00000000025ff968 000000077c4f59a0
+0x00000000025ff3c0:   0000000000000000 00000000025ff460
+0x00000000025ff3d0:   000007fee55246d0 000007fee546c366
+0x00000000025ff3e0:   000000077c4f59a0 00000000025ff418
+0x00000000025ff3f0:   0000000200000001 000007feeae80118
+0x00000000025ff400:   000007feeaeb1248 0000a608a6c15de0 
+
+Instructions: (pc=0x000007fefd22b3dd)
+0x000007fefd22b3bd:   54 24 24 48 89 4c 24 28 4d 85 c9 0f 85 aa 06 00
+0x000007fefd22b3cd:   00 89 4c 24 38 48 8d 4c 24 20 ff 15 c3 fe 03 00
+0x000007fefd22b3dd:   48 81 c4 c8 00 00 00 c3 48 85 f6 74 08 83 3b 00
+0x000007fefd22b3ed:   76 03 66 89 16 bd 01 00 00 00 3b fd 0f 84 d6 02 
+
+
+Register to memory mapping:
+
+RAX=0x00000000738057ad is an unknown value
+RBX=0x000000077c4f59a0 is an oop
+{method} 
+ - klass: {other class}
+RCX=0x00000000025fed00 is pointing into the stack for thread: 0x000000000031c800
+RDX=0x00000000000000f0 is an unknown value
+RSP=0x00000000025ff310 is pointing into the stack for thread: 0x000000000031c800
+RBP=0x00000000025ff940 is pointing into the stack for thread: 0x000000000031c800
+RSI=0x000007fee55246d0 is an unknown value
+RDI=0x00000000025ff460 is pointing into the stack for thread: 0x000000000031c800
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000000 is an unknown value
+R10=0x000007feeae80000 is an unknown value
+R11=0x00000000025ff350 is pointing into the stack for thread: 0x000000000031c800
+R12=0x0000000000000000 is an unknown value
+R13=0x000000077c4f59a0 is an oop
+{method} 
+ - klass: {other class}
+R14=0x00000000025ff968 is pointing into the stack for thread: 0x000000000031c800
+R15=0x000000000031c800 is a thread
+
+
+Stack: [0x0000000002500000,0x0000000002600000],  sp=0x00000000025ff310,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [KERNELBASE.dll+0xb3dd]  RaiseException+0x3d
+j  com.upcloud.ddmi.UpCloudDDMI.startup(Ljava/lang/String;)V+16
+j  com.upcloud.ddmi.jni.Test.startupDDMI()V+5
+j  com.upcloud.ddmi.jni.Test.main([Ljava/lang/String;)V+9
+v  ~StubRoutines::call_stub
+V  [jvm.dll+0x1eac57]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  com.upcloud.ddmi.core.DDMIService.startup(Ljava/lang/String;)V+0
+j  com.upcloud.ddmi.UpCloudDDMI.startup(Ljava/lang/String;)V+16
+j  com.upcloud.ddmi.jni.Test.startupDDMI()V+5
+j  com.upcloud.ddmi.jni.Test.main([Ljava/lang/String;)V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00000000067eb800 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=10616, stack(0x00000000078a0000,0x00000000079a0000)]
+  0x00000000067cd000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6344, stack(0x00000000077a0000,0x00000000078a0000)]
+  0x00000000067b8000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=9428, stack(0x00000000076a0000,0x00000000077a0000)]
+  0x0000000006773000 JavaThread "Attach Listener" daemon [_thread_blocked, id=10532, stack(0x00000000075a0000,0x00000000076a0000)]
+  0x0000000006772800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7448, stack(0x00000000074a0000,0x00000000075a0000)]
+  0x000000000675e000 JavaThread "Finalizer" daemon [_thread_blocked, id=9208, stack(0x00000000073a0000,0x00000000074a0000)]
+  0x0000000006758000 JavaThread "Reference Handler" daemon [_thread_blocked, id=9812, stack(0x00000000072a0000,0x00000000073a0000)]
+=>0x000000000031c800 JavaThread "main" [_thread_in_native, id=10800, stack(0x0000000002500000,0x0000000002600000)]
+
+Other Threads:
+  0x000000000674e800 VMThread [stack: 0x00000000071a0000,0x00000000072a0000] [id=11012]
+  0x00000000067fc000 WatcherThread [stack: 0x00000000079a0000,0x0000000007aa0000] [id=1072]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 37888K, used 650K [0x00000007d5c00000, 0x00000007d8640000, 0x0000000800000000)
+  eden space 32512K, 2% used [0x00000007d5c00000,0x00000007d5ca2900,0x00000007d7bc0000)
+  from space 5376K, 0% used [0x00000007d8100000,0x00000007d8100000,0x00000007d8640000)
+  to   space 5376K, 0% used [0x00000007d7bc0000,0x00000007d7bc0000,0x00000007d8100000)
+ PSOldGen        total 86528K, used 0K [0x0000000781400000, 0x0000000786880000, 0x00000007d5c00000)
+  object space 86528K, 0% used [0x0000000781400000,0x0000000781400000,0x0000000786880000)
+ PSPermGen       total 21248K, used 3046K [0x000000077c200000, 0x000000077d6c0000, 0x0000000781400000)
+  object space 21248K, 14% used [0x000000077c200000,0x000000077c4f9970,0x000000077d6c0000)
+
+Code Cache  [0x0000000002600000, 0x0000000002870000, 0x0000000005600000)
+ total_blobs=173 nmethods=2 adapters=125 free_code_cache=49944000 largest_free_block=12352
+
+Dynamic libraries:
+0x0000000000400000 - 0x000000000042f000 	C:\Program Files\Java\jdk1.6.0_43\bin\javaw.exe
+0x0000000077270000 - 0x0000000077419000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000077150000 - 0x0000000077270000 	C:\Windows\system32\kernel32.dll
+0x000007fefd220000 - 0x000007fefd28c000 	C:\Windows\system32\KERNELBASE.dll
+0x000007feff180000 - 0x000007feff25b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feff4e0000 - 0x000007feff57f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff260000 - 0x000007feff27f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007feff050000 - 0x000007feff17d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000077050000 - 0x000000007714a000 	C:\Windows\system32\USER32.dll
+0x000007fefec20000 - 0x000007fefec87000 	C:\Windows\system32\GDI32.dll
+0x000007fefe9b0000 - 0x000007fefe9be000 	C:\Windows\system32\LPK.dll
+0x000007fefef80000 - 0x000007feff04a000 	C:\Windows\system32\USP10.dll
+0x000007fefebf0000 - 0x000007fefec1e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefec90000 - 0x000007fefed99000 	C:\Windows\system32\MSCTF.dll
+0x000007fefd130000 - 0x000007fefd161000 	C:\Windows\system32\nvinitx.dll
+0x000007fefd120000 - 0x000007fefd12c000 	C:\Windows\system32\VERSION.dll
+0x000000000f000000 - 0x000000000f006000 	C:\Program Files\NVIDIA Corporation\CoProcManager\detoured.dll
+0x000007fef9840000 - 0x000007fef9871000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvd3d9wrapx.dll
+0x000007fefeda0000 - 0x000007fefef77000 	C:\Windows\system32\SETUPAPI.dll
+0x000007fefd540000 - 0x000007fefd576000 	C:\Windows\system32\CFGMGR32.dll
+0x000007fefd580000 - 0x000007fefd657000 	C:\Windows\system32\OLEAUT32.dll
+0x000007fefe720000 - 0x000007fefe923000 	C:\Windows\system32\ole32.dll
+0x000007fefd370000 - 0x000007fefd38a000 	C:\Windows\system32\DEVOBJ.dll
+0x000007fef9800000 - 0x000007fef9822000 	C:\Program Files\NVIDIA Corporation\CoProcManager\nvdxgiwrapx.dll
+0x000000006d8c0000 - 0x000000006e07c000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\server\jvm.dll
+0x000007fefb120000 - 0x000007fefb15b000 	C:\Windows\system32\WINMM.dll
+0x000000006d830000 - 0x000000006d83e000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\verify.dll
+0x000000006d450000 - 0x000000006d477000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\java.dll
+0x000000006d880000 - 0x000000006d892000 	C:\Program Files\Java\jdk1.6.0_43\jre\bin\zip.dll
+0x000007fef19e0000 - 0x000007fef1a0c000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Core\BaseLib\debug\BaseLib.dll
+0x000000005eb80000 - 0x000000005edcc000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\Qt5Networkd.dll
+0x000007fefd660000 - 0x000007fefd6ad000 	C:\Windows\system32\WS2_32.dll
+0x000007fefd7e0000 - 0x000007fefd7e8000 	C:\Windows\system32\NSI.dll
+0x0000000066cf0000 - 0x00000000677d4000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\Qt5Cored.dll
+0x000007fefd890000 - 0x000007fefe619000 	C:\Windows\system32\SHELL32.dll
+0x000007fefe640000 - 0x000007fefe6b1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fef7f00000 - 0x000007fef7f18000 	C:\Windows\system32\MPR.dll
+0x000000005e620000 - 0x000000005e880000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\icuin53.dll
+0x0000000061570000 - 0x000000006171b000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\icuuc53.dll
+0x0000000049db0000 - 0x000000004b23a000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\icudt53.dll
+0x000007feee790000 - 0x000007feee87f000 	C:\Windows\system32\MSVCR120.dll
+0x000007feee4a0000 - 0x000007feee546000 	C:\Windows\system32\MSVCP120.dll
+0x000007fee5980000 - 0x000007fee5a93000 	C:\Windows\system32\MSVCP120D.dll
+0x000007fee5370000 - 0x000007fee5581000 	C:\Windows\system32\MSVCR120D.dll
+0x000007fefc810000 - 0x000007fefc86b000 	C:\Windows\system32\DNSAPI.dll
+0x000007fefd3d0000 - 0x000007fefd53c000 	C:\Windows\system32\CRYPT32.dll
+0x00000000003b0000 - 0x00000000003bf000 	C:\Windows\system32\MSASN1.dll
+0x000007fefd050000 - 0x000007fefd05f000 	C:\Windows\system32\cryptbase.dll
+0x000007fefaef0000 - 0x000007fefaf14000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Client-RemoteUI\BaseIRemoteLib\debug\BaseIRemoteLib.dll
+0x000007fef19c0000 - 0x000007fef19d9000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Client-RemoteUI\BusinessIRemote\HthrobsIRemote\debug\HthrobsIRemote.dll
+0x000007fee5190000 - 0x000007fee5274000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\TransMsgLib.dll
+0x000007fef1980000 - 0x000007fef19b3000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\TimerLib.dll
+0x000007fee9940000 - 0x000007fee9973000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Core\TimerLib\debug\TimerLib.dll
+0x000007fee78c0000 - 0x000007fee79a4000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Core\TransMsgLib\debug\TransMsgLib.dll
+0x000007fef1a40000 - 0x000007fef1a56000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Client-RemoteUI\BusinessIRemote\OperaIRemote\debug\OperaIRemote.dll
+0x000007feeb990000 - 0x000007feeb9dc000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\ActionLib.dll
+0x000007fee94f0000 - 0x000007fee953c000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Core\ActionLib\debug\ActionLib.dll
+0x000007fee8500000 - 0x000007fee855e000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Core\DuplexLib\debug\DuplexLib.dll
+0x000007feebb80000 - 0x000007feebba5000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\AvroLib.dll
+0x000007fee93e0000 - 0x000007fee9405000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Core\AvroLib\debug\AvroLib.dll
+0x000007fee5680000 - 0x000007fee57aa000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Core\NetLib\debug\NetLib.dll
+0x000007fee9470000 - 0x000007fee949f000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\Qt5SerialPortd.dll
+0x000007feeae80000 - 0x000007feeaebf000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Client-RemoteUI\NetIRemoteUILib\debug\NetIRemoteUILib.dll
+0x000007fef1960000 - 0x000007fef197e000 	C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin\TimerIRemoteUILib.dll
+0x000007feeba80000 - 0x000007feeba9e000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Client-RemoteUI\TimerIRemoteUILib\debug\TimerIRemoteUILib.dll
+0x000007feeae40000 - 0x000007feeae75000 	E:\build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\UpCloud-Client-RemoteUI\NIRemoteUI\UpCloudDDMILib\debug\UpCloudDDMILib.dll
+0x0000000077430000 - 0x0000000077437000 	C:\Windows\system32\PSAPI.DLL
+
+VM Arguments:
+jvm_args: -Djava.library.path=E:\UpCloudEcosphere\UpCloud-Client-RemoteUI\NIRemoteUI\DDMIWorkspace\upcloud-ddmi\build\classes\com\upcloud\ddmi\jni -Dfile.encoding=GBK 
+java_command: com.upcloud.ddmi.jni.Test
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.6.0_43
+CLASSPATH=,;
+PATH=C:/Program Files/Java/jre1.8.0_25/bin/server;C:/Program Files/Java/jre1.8.0_25/bin;C:/Program Files/Java/jre1.8.0_25/lib/amd64;D:\Program~Softwares~Files\perl5.2x64\site\bin;D:\Program~Softwares~Files\perl5.2x64\bin;D:\Program~Softwares~Files\oracle\product\12.1.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\NetSarang;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\Program~Softwares~Files\TortoiseSVN\bin;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\3.0\bin\x64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft Windows Performance Toolkit\;D:\Program~Softwares~Files\TortoiseGit\bin;D:\Program~Softwares~Files\rubyinstaller_2_2_3_x64\Ruby22-x64\bin;D:\Program~Softwares~Files\Python_3_5_x64\Scripts\;D:\Program~Softwares~Files\Python_3_5_x64\;F:\Java's~Namespace\workspaces\Designs & Models\build-ttewewew1-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug\debug;D:\Program~Softwares~Files\Microsoft Visual Studio 12.0\VC\bin\amd64;D:\Program~Softwares~Files\Microsoft SDKs\Bin\x64;C:\Program Files (x86)\Java\jdk1.6.0_43\bin;D:\Program~Softwares~Files\Android\android-sdk-windows\platform-tools;D:\Program~Softwares~Files\Android\android-sdk-windows\tools;C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin;C:\Qt\Qt5.4.2-windows-x86-msvc2013_64\5.4\msvc2013_64\bin;D:\Program~Softwares~Files\eclipse-jee-luna-SR2-x86_64\eclipse;
+USERNAME=Lynzabo
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 8302960k(3481632k free), swap 16604084k(7972608k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (20.14-b01) for windows-amd64 JRE (1.6.0_43-b01), built on Mar  1 2013 01:52:33 by "java_re" with MS VC++ 8.0 (VS2005)
+
+time: Mon Dec 28 18:53:45 2015
+elapsed time: 0 seconds
+

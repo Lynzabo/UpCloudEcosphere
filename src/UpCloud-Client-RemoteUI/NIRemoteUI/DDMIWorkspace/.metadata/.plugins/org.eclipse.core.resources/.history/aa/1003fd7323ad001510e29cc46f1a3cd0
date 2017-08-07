@@ -1,0 +1,9 @@
+package com.upcloud.ddmi.util;
+
+public class LogUtil {
+
+	public LogUtil() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

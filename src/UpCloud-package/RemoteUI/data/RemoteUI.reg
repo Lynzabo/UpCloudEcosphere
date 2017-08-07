@@ -1,0 +1,50 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\StartRemoteUI.RemoteUIFrameWork]
+@="RemoteUIFrameWork Class"
+
+[HKEY_CLASSES_ROOT\StartRemoteUI.RemoteUIFrameWork\CLSID]
+@="{030F9200-AD85-44E4-9F6C-65A84C635B69}"
+
+[HKEY_CLASSES_ROOT\StartRemoteUI.RemoteUIFrameWork\CurVer]
+@="StartRemoteUI.RemoteUIFrameWork.1"
+
+[HKEY_CLASSES_ROOT\StartRemoteUI.RemoteUIFrameWork.1]
+@="RemoteUIFrameWork Class"
+
+[HKEY_CLASSES_ROOT\StartRemoteUI.RemoteUIFrameWork.1\CLSID]
+@="{030F9200-AD85-44E4-9F6C-65A84C635B69}"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}]
+@="RemoteUIFrameWork Class"
+"AppID"="{A095BA0C-224F-4933-A458-2DD7F6B85D8F}"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\Control]
+@=""
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\LocalServer32]
+@="\"C:\\UpCloud-package\\RemoteUI\\bin\\StartRemoteUI.exe\" -activex"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\MiscStatus]
+@="1"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\MiscStatus\1]
+@="131473"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\ProgID]
+@="StartRemoteUI.RemoteUIFrameWork.1"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\Programmable]
+@=""
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\ToolboxBitmap32]
+@="\"C:\\UpCloud-package\\RemoteUI\\bin\\StartRemoteUI.exe\", 101"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\TypeLib]
+@="{EC08F8FC-2754-47AB-8EFE-56A54057F34E}"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\Version]
+@="1.0"
+
+[HKEY_CURRENT_USER\Software\Classes\CLSID\{030F9200-AD85-44E4-9F6C-65A84C635B69}\VersionIndependentProgID]
+@="StartRemoteUI.RemoteUIFrameWork"

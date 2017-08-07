@@ -1,0 +1,70 @@
+package com.upcloud.ddmi.listener;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+import org.apache.log4j.Logger;
+
+import com.upcloud.ddmi.UpCloudDDMI;
+import com.upcloud.ddmi.core.DDMISignalHandler;
+import com.upcloud.ddmi.core.DDMISignalHandler.StopListener;
+
+public class DDMIListener implements ServletContextListener,StopListener {
+	private static final Logger logger = Logger.getLogger(DDMIListener.class);
+	/*
+	 * @Override public void contextInitialized(ServletContextEvent arg0) {
+	 * logger.debug("上云科技数据分发服务准备启动..."); new Thread(new Runnable() {
+	 * 
+	 * @Override public void run() { UpCloudDDMI .getInstance() .startup(
+	 * "E:/UpCloudEcosphere/UpCloud-Client-RemoteUI/NIRemoteUI/DDMIWorkspace/upcloud-ddmi/WebContent/upcloud-ddmi/"
+	 * ); } }).start(); }
+	 * 
+	 * @Override public void contextDestroyed(ServletContextEvent arg0) {
+	 * logger.debug("上云科技数据分发服务准备销毁..."); UpCloudDDMI.getInstance().destory();
+	 * logger.debug("上云科技数据分发服务销毁完毕"); }
+	 */
+	Timer timer;
+
+	public void contextInitialized(ServletContextEvent e) {
+		e.getServletContext().getRealPath("/");
+		logger.info("上云科技数据分发服务启动...");
+		//铺货JVM退出命令
+		DDMISignalHandler dsh = new DDMISignalHandler();
+		// kill命令
+		dsh.install("TERM");
+		// ctrl+c命令
+		dsh.install("INT");
+		dsh.setStopListener(this);
+		//启动服务
+		this.timer = new Timer();
+		this.timer.schedule(new TimerTask() {
+			public void run() {
+				try {
+					UpCloudDDMI
+							.getInstance()
+							.startup(
+									"E:/UpCloudEcosphere/UpCloud-Client-RemoteUI/NIRemoteUI/DDMIWorkspace/upcloud-ddmi/WebContent/upcloud-ddmi/");
+				} catch (Exception e) {
+					DDMIListener.logger.error("", e);
+				}
+
+			}
+		}, 0L, (long) (5 * 60) * 1000L);
+
+	}
+
+	public void contextDestroyed(ServletContextEvent e) {
+		logger.debug("上云科技数据分发服务准备销毁...");
+		UpCloudDDMI.getInstance().destory();
+		logger.debug("上云科技数据分发服务销毁完毕");
+	}
+
+	@Override
+	public void kill(String signalName) {
+		contextDestroyed(null);
+	}
+
+}

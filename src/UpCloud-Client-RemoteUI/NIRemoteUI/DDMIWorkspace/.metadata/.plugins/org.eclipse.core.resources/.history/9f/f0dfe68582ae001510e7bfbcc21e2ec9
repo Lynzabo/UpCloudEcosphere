@@ -1,0 +1,137 @@
+package com.upcloud.web.test;
+
+import java.awt.List;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.upcloud.ddmi.UpCloudDDMI;
+import com.upcloud.ddmi.core.DDEditor;
+import com.upcloud.ddmi.core.dto.Task;
+import com.upcloud.ddmi.core.dto.TaskAddr;
+import com.upcloud.ddmi.core.dto.TaskFile;
+import com.upcloud.ddmi.core.exception.DDMIEditException;
+import com.upcloud.ddmi.core.exception.DDMIMetaIllegalException;
+
+/**
+ * Servlet implementation class DDMIDeleteTestServlet
+ */
+public class DDMIDeleteTestServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public DDMIDeleteTestServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String jsonStr = "";
+		// [1]下发任务信息
+		final Task task = new Task();
+		task.setTaskName("task000001").setDescription("task000001的描述信息")
+				.setStrategy((short) 0x1);
+		
+		// [2]待下发节点服务器列表信息
+		final List<TaskAddr> addrs = new ArrayList<TaskAddr>();
+		TaskAddr addr = new TaskAddr();
+		addr.setAddrUUID("1111111");
+		addr.setIsGroup(false);
+		TaskAddr addr2 = new TaskAddr();
+		addr2.setAddrUUID("22ff22");
+		addr2.setIsGroup(true);
+		addrs.add(addr);
+		addrs.add(addr2);
+		// [3]待删除文件列表
+		ArrayList<String> delFileAddrs = new ArrayList<String>();
+		delFileAddrs.add("/opt/111.txt");
+		delFileAddrs.add("/opt/111.txt");
+		delFileAddrs.add("/opt/111.txt");
+		// [4]结构化文件列表
+		final ArrayList<TaskFile> structsendFiles = new ArrayList<TaskFile>();
+		TaskFile ssendFile = new TaskFile();
+		ssendFile.setFileName("111.xml").setSrcAbst("d:/111.xml")
+				.setFileDestName("111_new.xml").setSaveAbst("/opt");
+		structsendFiles.add(ssendFile);
+		TaskFile ssendFile2 = new TaskFile();
+		ssendFile2.setFileName("222.xml").setSrcAbst("d:/222.xml")
+				.setFileDestName("222_new.xml").setSaveAbst("/usr/local");
+		structsendFiles.add(ssendFile2);
+		DDEditor editor = UpCloudDDMI.getInstance().createDDEditor();
+		String[] uuids = null;
+		// 业务
+		try {
+			uuids = editor.delete(delFileAddrs,structsendFiles);
+			// Web业务代码
+			editor.commit();
+			jsonStr = "{\"statusCode\":\"200\",\"message\":\"删除成功\"}";
+		} catch (DDMIMetaIllegalException e) {
+			
+		} catch (DDMIEditException ex) {
+			editor.rollback();
+			jsonStr = "{\"statusCode\":\"201\",\"message\":\""+ex.getMessage()+"\"}";
+		}
+		
+		/*DDEditor editor = UpCloudDDMI.getInstance().createDDEditor();
+		// 业务
+		try {
+			editor.delete(uuids);
+			// Web业务代码
+			editor.commit();
+			jsonStr = "{\"statusCode\":\"200\",\"message\":\"删除成功\"}";
+		} catch (DDMIMetaIllegalException e) {
+			
+		} catch (DDMIEditException ex) {
+			editor.rollback();
+			jsonStr = "{\"statusCode\":\"201\",\"message\":\""+ex.getMessage()+"\"}";
+		}*/
+		/*final String[] uuids = new String[] { "unstruct_UUID", "struct_UUID" };
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				DDEditor editor = UpCloudDDMI.getInstance().createDDEditor();
+				// 业务
+				try {
+					editor.delete(uuids);
+					// Web业务代码
+					editor.commit();
+					jsonStr = "{\"statusCode\":\"200\",\"message\":\"删除成功\"}";
+				} catch (DDMIMetaIllegalException ex) {
+					editor.rollback();
+					jsonStr = "{\"statusCode\":\"201\",\"message\":\""+ex.getMessage()+"\"}";
+				}
+			}
+		}).start();*/
+		response.setCharacterEncoding("UTF-8");
+		response.setContentType("application/json; charset=utf-8");
+		PrintWriter out = null;
+		try {
+		    out = response.getWriter();
+		    out.write(jsonStr);
+		} catch (IOException e) {
+		    e.printStackTrace();
+		} finally {
+		    if (out != null) {
+		        out.close();
+		    }
+		}
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}

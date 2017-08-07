@@ -1,0 +1,9 @@
+package com.upcloud.ddmi.core;
+
+public class SignalHandler {
+
+	public SignalHandler() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

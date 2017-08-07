@@ -1,0 +1,7 @@
+package com.upcloud.ddmi.service;
+
+public abstract class AsyncTask {
+	public abstract void onPreExecute();
+	public abstract void onPreExecute();
+	public abstract void onPostExecute();
+}

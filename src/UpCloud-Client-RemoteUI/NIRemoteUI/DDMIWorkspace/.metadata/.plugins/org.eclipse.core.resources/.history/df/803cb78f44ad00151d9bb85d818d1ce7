@@ -1,0 +1,86 @@
+/**
+ * Copyright (c) UpCloud C/C++ development team.
+ * All rights 2015 reserved.
+ *
+ *      Project : upcloud-ddmi
+ *     FileName : UpCloudDDMI.java
+ *      Package : com.upcloud.ddmi
+ *	      Title : UpCloudDDMI
+ *         Time : [2015年12月25日 下午3:54:45] 
+ *       Author : Lynzabo
+ *       Verion : 1.0
+ */
+package com.upcloud.ddmi;
+
+import com.upcloud.ddmi.core.DDEditor;
+import com.upcloud.ddmi.core.DDMIService;
+
+/**
+ * <div style="text-align:left;margin-left:20px"> <b>类信息</b>
+ * <ul>
+ * <li><b>ClassName</b> - UpCloudDDMI</li>
+ * <li><b>Description</b> - 上云科技数据分发服务入口</li>
+ * <li><b>Notice</b> - 所有的常量必须有注释,并且应该用"域注释"</li>
+ * </ul>
+ * 
+ * @version 1.0
+ * @since 2015年12月25日 下午3:54:45
+ * @author Lynzabo </div>
+ */
+public enum UpCloudDDMI {
+	INSTANCE;
+	static {
+		try {
+			// 先配置Qt的安装目录
+			// D:/Program~Softwares~Files/rubyinstaller_2_2_3_x64/Ruby22-x64/bin;D:/Program~Softwares~Files/Python_3_5_x64/Scripts/;D:/Program~Softwares~Files/Python_3_5_x64/;F:/Java's~Namespace/workspaces/Designs
+			// &
+			// Models/build-ttewewew1-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/debug;D:/Program~Softwares~Files/Microsoft
+			// Visual Studio
+			// 12.0/VC/bin/amd64;D:/Program~Softwares~Files/Microsoft
+			// SDKs/Bin/x64;C:/Program Files
+			// (x86)/Java/jdk1.6.0_43/bin;D:/Program~Softwares~Files/Android/android-sdk-windows/platform-tools;D:/Program~Softwares~Files/Android/android-sdk-windows/tools;C:/Qt/Qt5.4.2-windows-x86-msvc2013_64/5.4/msvc2013_64/bin;C:/Qt/Qt5.4.2-windows-x86-msvc2013_64/5.4/msvc2013_64/bin
+			// System.setProperty("java.library.path",
+			// "E:/UpCloudEcosphere/UpCloud-Client-RemoteUI/NIRemoteUI/DDMIWorkspace/upcloud-ddmi/build/classes/com/upcloud/ddmi/jni");
+			// System.loadLibrary("UpCloudDDMILib");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Core/BaseLib/debug/BaseLib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/BaseIRemoteLib/debug/BaseIRemoteLib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/BusinessIRemote/HthrobsIRemote/debug/HthrobsIRemote.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Core/TimerLib/debug/TimerLib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Core/TransMsgLib/debug/TransMsgLib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/TimerIRemoteUILib/debug/TimerIRemoteUILib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Core/NetLib/debug/NetLib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Core/ActionLib/debug/ActionLib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/NetIRemoteUILib/debug/NetIRemoteUILib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/BusinessIRemote/OperaIRemote/debug/OperaIRemote.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Core/DuplexLib/debug/DuplexLib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Core/AvroLib/debug/AvroLib.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/FrontBusinessIRemoteUI/DDMIRemoteUI/UnstructOperaIRemoteUI/debug/UnstructOperaIRemoteUI.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/FrontBusinessIRemoteUI/BasalOperaIRemoteUI/debug/BasalOperaIRemoteUI.dll");
+//			System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/FrontBusinessIRemoteUI/DDMIRemoteUI/StructOperaIRemoteUI/debug/StructOperaIRemoteUI.dll");
+//			
+			System.loadLibrary("UpCloudDDMILib");
+			//System.load("E:/build-UpCloudEcosphere-Desktop_Qt_5_4_2_MSVC2013_64bit-Debug/UpCloud-Client-RemoteUI/NIRemoteUI/UpCloudDDMILib/debug/UpCloudDDMILib.dll");
+			// System.load("E:/UpCloudEcosphere/UpCloud-Client-RemoteUI/NIRemoteUI/DDMIWorkspace/upcloud-ddmi/build/classes/com/upcloud/ddmi/jni/UpCloudDDMILib.dll");
+		//TODO	将jni系统日志托管到Log4j上
+		} catch (UnsatisfiedLinkError e) {
+			e.printStackTrace();
+		}
+	}
+	/**
+	 * 
+	 */
+	public void startup() {
+		dservice.startup();
+	}
+	public void destory() {
+		dservice.destory();
+	}
+
+	public static UpCloudDDMI getInstance() {
+		return INSTANCE;
+	}
+	public DDEditor createDDEditor() {
+		return new DDEditor();
+	}
+	private DDMIService dservice;
+}

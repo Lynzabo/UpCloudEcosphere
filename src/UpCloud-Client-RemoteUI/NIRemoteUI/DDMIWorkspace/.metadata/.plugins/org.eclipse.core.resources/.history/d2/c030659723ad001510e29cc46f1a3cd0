@@ -1,0 +1,5 @@
+package com.upcloud.ddmi.util;
+
+public class LogUtil1 {
+	
+}

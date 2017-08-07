@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="START">image/播放按钮.png</file>
+        <file alias="SHRINK">image/传输（收起传输）按钮.png</file>
+        <file alias="CANCEL">image/取消按钮.png</file>
+        <file alias="CANCEL_DELETE">image/取消-红色按钮.png</file>
+        <file alias="DOWN">image/下载传输按钮.png</file>
+        <file alias="PAUSE">image/暂停-按钮.png</file>
+    </qresource>
+</RCC>
